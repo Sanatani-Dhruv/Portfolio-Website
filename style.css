@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+
 * {
 	padding: 0;
 	margin: 0;
@@ -8,6 +11,7 @@
 body {
 	background-color: black;
 	color: white;
+	padding: 100px 0 50px;
 }
 
 a {
@@ -89,12 +93,16 @@ li {
 	width: 100%;
 }
 
+.intro {
+	padding: 220px 0 50px;
+}
+
 .main {
 	height: max-content;
 	width: 75%;
 	max-width: 1000px;
 	/* margin: auto; */
-	padding: max(220px, 10dvh) max(0.3rem, 10dvw);
+	padding: 0 max(0.3rem, 10dvw);
 }
 
 .main-title {
@@ -114,6 +122,29 @@ li {
 	font-size: 1.2rem;
 	color: rgba(213,213,213,1);
 	line-height: 1.5;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 0.75rem;
+	font-size: 1.2rem;
+	font-weight: 600;
+	background-color: transparent;
+	padding-bottom: 30px;
+}
+
+.footer-text {
+	text-align: center;
+}
+
+.github-link {
+	/* margin: auto; */
+
+	img {
+		width: 14px;
+	}
 }
 
 @media (max-width: 1100px) {
@@ -187,7 +218,7 @@ li {
 		bottom: 0;
 		left: 0;
 		right: 0;
-		padding: 20px 20px;
+		padding: 15px 20px 15px;
 		backdrop-filter: blur(7px);
 	}
 
@@ -223,3 +254,156 @@ li {
 		font-size: 0.95rem;
 	}
 }
+
+/* CSS FROM IT Website */
+/*  */
+
+.login-container-box {
+	text-align: center;
+	margin: auto;
+	padding: 50px 0 100px;
+}
+
+.login-container {
+	width: min(100%, 570px);
+	border: 3px solid white;
+	padding: 50px 40px 40px;
+	border-radius: 15px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 30px;
+}
+
+.login-title {
+	text-align: center;
+	margin-bottom: 5px;
+	font-size: 1.7rem;
+}
+
+.login-input-container {
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.1rem;
+}
+
+.login-input {
+	padding: 0 5px;
+	font-family: "Inter", sans-serif;
+	width: 100%;
+	max-width: 250px;
+	color: black;
+	font-size: 1.03rem;
+}
+
+.login-input-container:has(a.no-exist-acc),
+.login-input-container:has(input.login-btn) {
+	justify-content: space-around !important;
+}
+
+.login-btn {
+	color: black;
+	padding: 10px 60px;
+	border: none;
+	border-radius: 25px;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 0.15s;
+}
+
+.login-btn.submit {
+	background-color: transparent;
+	border: 3px solid rgb(65,235,196);
+	color: white;
+}
+
+.login-btn.reset {
+	background-color: transparent;
+	border: 3px solid crimson;
+	color: white;
+}
+
+.login-btn.submit:hover {
+	background-color: rgb(65,235,196);
+	color: black;
+}
+
+.login-btn.reset:hover {
+	background-color: crimson;
+}
+
+.login-input-container:has(a) {
+	justify-content: center;
+}
+
+.login-input-container:has(a) .no-exist-acc-link {
+	text-decoration: underline;
+	transition: all 0.15s;
+}
+
+.login-input-container:has(a) .no-exist-acc-link:hover {
+	color: grey;
+}
+
+.body:not(.dark) {
+	.login-container {
+		border: 3px solid black;
+	}
+
+	.login-btn {
+		color: black;
+	}
+
+	.login-btn.reset:hover {
+		color: white;
+	}
+
+	.login-input-container:has(a) .no-exist-acc-link {
+		color: black !important;
+	}
+
+	.login-input-container:has(a) .no-exist-acc-link:hover {
+		color: grey !important;
+	}
+
+	.php-status-success-message {
+		font-weight: bold;
+		color: black !important;
+	}
+
+}
+
+@media  (max-width: 900px) {
+	.main-container:has(.login-container-box) {
+		padding: 0 2%;
+	}
+
+	.login-container-box {
+		margin: 10px;
+	}
+
+	.login-container {
+		padding: 50px 20px 40px;
+		/* width: 100%; */
+	}
+
+	.login-input-container {
+		text-align: start;
+		flex-direction: column;
+
+		input {
+			width: 100%;
+			max-width: unset;
+		}
+	}
+	
+	.login-input-container:has(input.login-btn) {
+		flex-direction: column;
+		gap: 30px;
+	}
+}
+
+/* CSS FROM IT Website Ends */

@@ -6,6 +6,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 		<title>Contact - The Developer</title>
 	</head>
 	<body>
@@ -41,13 +42,39 @@
 			</nav>
 		</header>
 		<main class="main-container">
-			<div class="main">
-				<h1 class="main-title">Hi, I'm Dhruv Solanki</h1>
-				<h2 class="main-sdesc">Creative Web Designer</h2>
-				<div class="main-ldesc">
-					I’m Dhruv Solanki, a creative web designer passionate about building innovative digital experiences. With a focus on clean design, intuitive user experiences, and the latest web technologies, I help brands and businesses transform their online presence. Whether you're looking to revamp your current site or build something from the ground up, I’m here to bring your ideas to life. Let’s create something amazing together!
-				</div>
+			<div class="main login-container-box">
+				<h2 class="login-title">
+					Contact Us
+				</h2>
+				<form method="post" action=''>
+					<div class="login-container">
+						<div class="login-input-container">
+							<label class="login-label" for="login-name">Your Name: </label>
+							<input class="login-input" pattern="[a-z0-9 ]*" id="login-name" type="text" placeholder="Enter User Name" name="login-name" required>
+						</div>
+						<div class="login-input-container">
+							<label class="login-label" for="login-email">Email: </label>
+							<input class="login-input" pattern="([a-z0-9].{5,25})[@]([a-z0-9].{2,10})\.([a-z].{1,10})" id="login-email" type="email" placeholder="Enter Your Email" title="Example: example123@kmail.com" name="login-email" required>
+						</div>
+						<div class="login-input-container">
+							<label class="login-label" for="login-message">Message: </label>
+							<textarea id="login-message" class="login-input" placeholder="Short message in less than 100 words" title="Example: example123@kmail.com" name="login-message" rows="7" required></textarea>
+						</div>
+						<div class="login-input-container">
+							<input class="login-btn submit" name="submit" type="submit" value="Send Email">
+							<input class="login-btn reset" name="reset" type="reset" value="Reset">
+						</div>
+					</div>
+				</form>
 			</div>
 		</main>
+		<footer class="footer-container">
+			<div class="footer-text">
+				© 2025 Dhruv - The Developer. All Rights Reserved. Website by
+			<a class="github-link" href="https://github.com/Sanatani-Dhruv/" target="_blank">
+				<img src="github-mark-white.svg" alt="Github Link">
+			</a>
+			</div>
+		</footer>
 	</body>
 </html>
